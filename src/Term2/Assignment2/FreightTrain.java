@@ -22,7 +22,14 @@ public class FreightTrain {
     // then the train should be set to size one, with a single boxcar containing
     // 5 gizmos and not in repair.
     public FreightTrain(int n) {
-        /* missing code */
+        if(n <= 0)
+            n = 1;
+        else {
+            for (int i = 0; i <= n; i++) {
+                train.add(new Boxcar("gizmos", 5, false));
+            }
+        }
+
     }
 
     // This method returns a String representation of the
@@ -46,7 +53,7 @@ public class FreightTrain {
 
     // This method sets the cargo type of all the boxcars in the entire train.
     public void setCargo(String c) {
-        /* missing code */
+        setCargo(c);
     }
 
     // This method sets the boxcars to the pattern "gizmos", "gadgets", "widgets",
