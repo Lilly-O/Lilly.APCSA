@@ -2,7 +2,7 @@
  * Captain extends UltimatePlayer, which extends Person
  * Will use methods and constructors from UltimatePlayer and Person classes
  * Identifies the player as captain of offense or defense
- * Variable to identify capatian type is boolean, true for offense, false for defense
+ * Variable to identify captain type is boolean, true for offense, false for defense
  */
 
 package Term2.Assignment3;
