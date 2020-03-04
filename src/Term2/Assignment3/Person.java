@@ -1,3 +1,8 @@
+/* Assignment 3
+ * Person Class
+ * This class will be the parent class for UltimatePlayer and Coach classes
+ * Should create a person that can be used throughout the program
+ */
 package Term2.Assignment3;
 
 public class Person {
@@ -11,6 +16,7 @@ public class Person {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
     // Returns lastName, firstName on 1 line
     public String toString() {
         return lastName + ", " + firstName;

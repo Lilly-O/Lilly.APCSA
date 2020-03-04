@@ -2,11 +2,7 @@ package Term2.Lesson8;/*
  * Lesson 8 - Unit 5 - Advanced Classes - Inheritance Overriding Methods
  */
 
-import java.io.*;
-
-import static java.lang.System.*;
-
-import java.util.Scanner;
+import java.io.IOException;
 
 class t2_lesson08_template {
 
@@ -16,7 +12,7 @@ class t2_lesson08_template {
 
         System.out.println("Perimeter: \t" + q.getPerimeter());
 
-        Rectangle r = new Rectangle (4,5);
+        Rectangle r = new Rectangle(4, 5);
         System.out.println("Perimeter: \t" + r.getPerimeter());
     }
 
