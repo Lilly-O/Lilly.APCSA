@@ -2,18 +2,21 @@
  * Lesson 9 - Unit 5 - Advanced Classes - Abstract classes
  */
 
-import Term2.Lesson9.Quadrilateral;
+package Term2.Lesson9;
 
 import java.util.Scanner;
 import java.lang.Math;
 import java.util.*;
 import java.io.*;
 
-class t2_lesson9_template {
+class Lesson9_Runner {
 
 
     public static void main(String str[]) throws IOException {
-         Quadrilateral q = new Quadrilateral(8, 2,1,10);
+
+         Rectangle r = new Rectangle(2,5);
+
+         System.out.println(r.getArea());
 
     }
 

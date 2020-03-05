@@ -12,7 +12,7 @@ public abstract class Quadrilateral {
         side3 = c;
         side4 = d;
     }
-    public abstract int getArea;
+    public abstract int getArea();
 
     public int getPerimeter() {
         return side1 + side2 + side3 + side4;
