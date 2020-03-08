@@ -1,11 +1,10 @@
 package Term2.Assignment4;
 
-/* Term 2 Assignment 4 - Fraction Comparable */
-
-/* A class which is used to represent fractions and implements
+/* Term 2 Assignment 4 - Fraction Comparable
+ * A class which is used to represent fractions and implements
  * the comparable interface
  */
-public class Fraction {
+public class Fraction implements Comparable {
     private int numerator;
     private int denominator;
 
@@ -24,6 +23,35 @@ public class Fraction {
         if (d > 0) {
             denominator = d;
         }
+        simplify();
+    }
+
+    // Compares the fractions to see if they are larger/smaller than the other
+    public int compareTo(Object other) {
+        Fraction otherFrac = (Fraction) other;
+        int thisNum = this.numerator * otherFrac.denominator;
+        int otherNum = otherFrac.numerator * this.denominator;
+
+        if (thisNum < otherNum) // Indicates that thisNum is smaller than otherNum
+            return -1;
+        if (otherNum < thisNum) // Indicates that otherNum is smaller than thisNum
+            return 1;
+        return 0;
+    }
+
+    // Method calls to find the GCD of the numerator and denominator
+    public void simplify() {
+        int div = gcd(numerator, denominator);
+        numerator /= div;
+        denominator /= div;
+    }
+
+    // Uses Euclidean algorithm to find the greatest common divisor
+    public static int gcd(int a, int b) {
+        int r = a % b;
+        if (r == 0)
+            return b;
+        return gcd(b, r);
     }
 
     // Return the fraction as a String e.g. "2/3"
@@ -53,5 +81,6 @@ public class Fraction {
             numerator = numerator * d + n * denominator;
             denominator *= d;
         }
+        simplify();
     }
 }
