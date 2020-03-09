@@ -4,7 +4,7 @@ package Term2.Lesson8;/*
 
 import java.io.IOException;
 
-class t2_lesson08_template {
+class Lesson8_Runner {
 
 
     public static void main(String str[]) throws IOException {
